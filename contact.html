@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="MatchIQ Pro: учебный сайт футбольной аналитики">
+  <title>Обратная связь | MatchIQ Pro</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <a class="brand" href="index.html"><span class="brand-icon"><i class="fa-solid fa-futbol"></i></span><span>MatchIQ<b>Pro</b></span></a>
+      <button class="btn menu-toggle d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarNav" aria-controls="sidebarNav" aria-expanded="false">☰ Меню</button>
+      <nav id="sidebarNav" class="nav collapse d-lg-block" aria-label="Главное меню">
+        <a class="nav-link" href="index.html"><i class="fa-solid fa-chart-pie" aria-hidden="true"></i>Дашборд</a>
+<a class="nav-link" href="match.html"><i class="fa-solid fa-calendar-days" aria-hidden="true"></i>Матчи</a>
+<a class="nav-link" href="standings.html"><i class="fa-solid fa-trophy" aria-hidden="true"></i>Турниры</a>
+<a class="nav-link" href="players.html"><i class="fa-solid fa-user" aria-hidden="true"></i>Игроки</a>
+<a class="nav-link" href="ai.html"><i class="fa-solid fa-brain" aria-hidden="true"></i>AI Аналитика</a>
+<a class="nav-link active" href="contact.html" aria-current="page"><i class="fa-solid fa-envelope" aria-hidden="true"></i>Контакты</a>
+      </nav>
+    </aside>
+    <div class="page">
+      <header class="topbar">
+        <h1>Обратная связь</h1>
+        <div class="header-tools">
+          
+          <button class="btn" type="button" id="themeButton" aria-label="Переключить тему"><i class="fa-solid fa-moon"></i> Тема</button>
+        </div>
+      </header>
+      <main class="content">
+
+        <p class="demo">Форма учебная: она проверяет введённые данные, но не отправляет их на сервер.</p>
+        <div class="grid-2">
+          <section class="card">
+            <h2>Заявка на API-доступ</h2>
+            <p class="muted small">Все поля обязательны. Ошибки показываются под соответствующим полем.</p>
+            <form id="contactForm" novalidate>
+              <div class="form-field"><label for="name">Имя</label><input class="input" id="name" name="name" placeholder="Не менее 2 символов" aria-describedby="nameError"><small class="error" id="nameError"></small></div>
+              <div class="form-field"><label for="email">Email</label><input class="input" id="email" name="email" type="email" placeholder="name@example.com" aria-describedby="emailError"><small class="error" id="emailError"></small></div>
+              <div class="form-field"><label for="topic">Тема обращения</label><select class="select" id="topic" name="topic" aria-describedby="topicError"><option value="">Выберите тему</option><option value="api">Доступ к API</option><option value="bug">Ошибка на сайте</option><option value="partner">Сотрудничество</option></select><small class="error" id="topicError"></small><p id="topicTip" class="topic-tip" aria-live="polite"></p></div>
+              <div class="form-field"><label for="message">Сообщение</label><textarea class="textarea" id="message" name="message" rows="5" placeholder="Не менее 15 символов" aria-describedby="messageError"></textarea><small class="error" id="messageError"></small></div>
+              <div class="form-field"><div class="checkbox-row"><input type="checkbox" id="agreement" name="agreement"><label for="agreement">Я понимаю, что это учебная форма без реальной отправки.</label></div><small class="error" id="agreementError"></small></div>
+              <button type="submit" class="btn primary">Проверить и отправить</button>
+              <div id="formSuccess" class="success" role="status" hidden></div>
+            </form>
+          </section>
+          <aside class="card">
+            <h2>О проекте</h2>
+            <p>MatchIQ Pro — демонстрационный сайт футбольной статистики, созданный для учебного проекта по Web Technologies.</p>
+            <p class="muted">Здесь можно изучать матчи, сравнивать игроков, смотреть таблицы и пример прогнозов.</p>
+            <button type="button" class="btn help-button">Как работает форма?</button>
+            <p class="help-content">JavaScript проверяет имя, email, тему, текст сообщения и согласие. Если есть ошибки, отправка блокируется.</p>
+          </aside>
+        </div>
+
+      </main>
+      <footer class="footer">MatchIQ Pro · Student endterm project · Demo data, not live results</footer>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/jquery-features.js"></script>
+</body>
+</html>
